@@ -249,11 +249,6 @@ st.sidebar.header("💬 Past Conversations")
 
 sc1, sc2 = st.sidebar.columns((6, 1))
 
-# history_keys = ["What is Streamlit",
-#                 "Snowflake vs. Databricks",
-#                 "Ideas for a new puppy",
-#                 "Quantum physics for babies"]
-
 history_keys = [key for key in reversed(list(st.context.cookies)) if key.startswith('history')]
 
 for key, conversation_id in enumerate(history_keys):
